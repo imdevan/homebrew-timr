@@ -1,26 +1,26 @@
 class Timr < Formula
   desc "A simple cli timer"
   homepage "https://devan.gg/timr"
-  version "0.4.1"
+  version "0.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.1/timr-darwin-amd64.tar.gz"
-      sha256 "4297132c5d58a4ceee069690175bbd51e99531d3fbea99e64b8e3dc9fa5c3b6b"
+      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.2/timr-darwin-amd64.tar.gz"
+      sha256 "d95a61e544e532c932b9816bdb37c3f64e6d48008670e0718b6b8325642054ef"
     elsif Hardware::CPU.arm?
-      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.1/timr-darwin-arm64.tar.gz"
-      sha256 "b748cd9cb95a0433c5c1f09628ca82b7542e76b62ae9700f71aada0d73678d2c"
+      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.2/timr-darwin-arm64.tar.gz"
+      sha256 "b398155f9dcdb2a6ac05e449c23dd608337b1063a64a7f264da07092dfcaadf5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.1/timr-linux-amd64.tar.gz"
-      sha256 "9a8082354dd65e6e169b7a7f6e69fba7bedfc70e9acd857684395d87e7f354e0"
+      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.2/timr-linux-amd64.tar.gz"
+      sha256 "037879a1bb6ac5eeee818621e1ccac35b26e280194ada6ba97f57fbefcc2126e"
     elsif Hardware::CPU.arm?
-      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.1/timr-linux-arm64.tar.gz"
-      sha256 "a0de59d80a22aa9d4e608a4a012f742e19d0a59d779bd841080ad01ea9f81ddc"
+      url "https://github.com/imdevan/timr-cli/releases/download/v0.4.2/timr-linux-arm64.tar.gz"
+      sha256 "01445f46983ddfff029f51f97f1144ec2c5d1d686d4dd2b4aa9e4a6882dd222d"
     end
   end
 
@@ -31,6 +31,6 @@ class Timr < Formula
   end
 
   test do
-    assert_match "v0.4.1", shell_output("#{bin}/timr --version")
+    assert_match "v0.4.2", shell_output("#{bin}/timr --version")
   end
 end
